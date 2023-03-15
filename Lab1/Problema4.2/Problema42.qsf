@@ -52,3 +52,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE Problema42.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Problema42.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/RafaelC/Desktop/ITA/EEA21/Laboratorio1/Lab1/Problema4.2/Problema42.vwf"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
