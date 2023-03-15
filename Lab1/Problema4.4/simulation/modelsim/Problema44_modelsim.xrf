@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Problema4.4/Problema44.bdf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Problema4.4/Problema44.vwf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Problema4.4/db/Problema44.cbx.xml
+design_name = Problema44
+instance = comp, \x0~input , x0~input, Problema44, 1
+instance = comp, \y~output , y~output, Problema44, 1
+instance = comp, \s2~input , s2~input, Problema44, 1
+instance = comp, \s1~input , s1~input, Problema44, 1
+instance = comp, \x1~input , x1~input, Problema44, 1
+instance = comp, \inst9~0 , inst9~0, Problema44, 1
+instance = comp, \x3~input , x3~input, Problema44, 1
+instance = comp, \x2~input , x2~input, Problema44, 1
+instance = comp, \inst9~1 , inst9~1, Problema44, 1
