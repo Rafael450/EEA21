@@ -1,3 +1,4 @@
+/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -94,6 +95,21 @@ TRANSITION_LIST("a")
 		REPEAT = 1;
 		NODE
 		{
+			REPEAT = 1;
+			LEVEL 0 FOR 40000.0;
+			LEVEL 1 FOR 40000.0;
+		}
+		LEVEL 0 FOR 20000.0;
+	}
+}
+
+TRANSITION_LIST("b")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
 			REPEAT = 2;
 			LEVEL 0 FOR 20000.0;
 			LEVEL 1 FOR 20000.0;
@@ -102,7 +118,7 @@ TRANSITION_LIST("a")
 	}
 }
 
-TRANSITION_LIST("b")
+TRANSITION_LIST("c")
 {
 	NODE
 	{
@@ -116,7 +132,7 @@ TRANSITION_LIST("b")
 	}
 }
 
-TRANSITION_LIST("c")
+TRANSITION_LIST("d")
 {
 	NODE
 	{
@@ -126,20 +142,6 @@ TRANSITION_LIST("c")
 			REPEAT = 10;
 			LEVEL 0 FOR 5000.0;
 			LEVEL 1 FOR 5000.0;
-		}
-	}
-}
-
-TRANSITION_LIST("d")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 20;
-			LEVEL 0 FOR 2500.0;
-			LEVEL 1 FOR 2500.0;
 		}
 	}
 }
@@ -157,7 +159,7 @@ TRANSITION_LIST("pin_name1")
 DISPLAY_LINE
 {
 	CHANNEL = "input";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
