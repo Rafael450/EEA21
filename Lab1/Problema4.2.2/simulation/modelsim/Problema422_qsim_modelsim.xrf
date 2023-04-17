@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab1/Problema4.2.2/Problema422.bdf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab1/Problema4.2.2/Problema422Sim.vwf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab1/Problema4.2.2/db/Problema422_qsim.cbx.xml
+design_name = Problema422
+instance = comp, \pin_name1~output , pin_name1~output, Problema422, 1
+instance = comp, \d~input , d~input, Problema422, 1
+instance = comp, \b~input , b~input, Problema422, 1
+instance = comp, \c~input , c~input, Problema422, 1
+instance = comp, \a~input , a~input, Problema422, 1
+instance = comp, \inst6~0 , inst6~0, Problema422, 1
