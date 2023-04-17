@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab2/Problema1/Problema1.bdf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab2/Problema1/Problema1.vwf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab2/Problema1/db/Problema1.cbx.xml
+design_name = Problema1
+instance = comp, \y0~output , y0~output, Problema1, 1
+instance = comp, \y1~output , y1~output, Problema1, 1
+instance = comp, \y2~output , y2~output, Problema1, 1
+instance = comp, \y3~output , y3~output, Problema1, 1
+instance = comp, \s1~input , s1~input, Problema1, 1
+instance = comp, \s0~input , s0~input, Problema1, 1
+instance = comp, \x0~input , x0~input, Problema1, 1

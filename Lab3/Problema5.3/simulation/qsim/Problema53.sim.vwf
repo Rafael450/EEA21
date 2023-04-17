@@ -1,4 +1,3 @@
-/* Simulator = Quartus II Simulator */
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -27,9 +26,9 @@ HEADER
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 100000.0;
-	SIMULATION_TIME = 0.0;
+	SIMULATION_TIME = 100000.0;
 	GRID_PHASE = 0.0;
-	GRID_PERIOD = 10000.0;
+	GRID_PERIOD = 5000.0;
 	GRID_DUTY_CYCLE = 50;
 }
 
@@ -53,7 +52,7 @@ SIGNAL("b")
 	PARENT = "";
 }
 
-SIGNAL("c")
+SIGNAL("ei1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -63,17 +62,17 @@ SIGNAL("c")
 	PARENT = "";
 }
 
-SIGNAL("d")
+SIGNAL("si")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = INPUT;
+	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("pin_name1")
+SIGNAL("ei")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -85,10 +84,25 @@ SIGNAL("pin_name1")
 
 GROUP("input")
 {
-	MEMBERS = "a", "b", "c", "d";
+	MEMBERS = "a", "b", "ei1";
 }
 
 TRANSITION_LIST("a")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 40000.0;
+			LEVEL 1 FOR 40000.0;
+		}
+		LEVEL 0 FOR 20000.0;
+	}
+}
+
+TRANSITION_LIST("b")
 {
 	NODE
 	{
@@ -103,7 +117,7 @@ TRANSITION_LIST("a")
 	}
 }
 
-TRANSITION_LIST("b")
+TRANSITION_LIST("ei1")
 {
 	NODE
 	{
@@ -117,41 +131,33 @@ TRANSITION_LIST("b")
 	}
 }
 
-TRANSITION_LIST("c")
+TRANSITION_LIST("si")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 10;
-			LEVEL 0 FOR 5000.0;
-			LEVEL 1 FOR 5000.0;
-		}
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 20000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 20000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
 	}
 }
 
-TRANSITION_LIST("d")
+TRANSITION_LIST("ei")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 20;
-			LEVEL 0 FOR 2500.0;
-			LEVEL 1 FOR 2500.0;
-		}
-	}
-}
-
-TRANSITION_LIST("pin_name1")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 30000.0;
+		LEVEL 0 FOR 30000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
 	}
 }
 
@@ -162,7 +168,7 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
-	CHILDREN = 1, 2, 3, 4;
+	CHILDREN = 1, 2, 3;
 }
 
 DISPLAY_LINE
@@ -187,7 +193,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "c";
+	CHANNEL = "ei1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -197,17 +203,16 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "d";
+	CHANNEL = "si";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 0;
+	TREE_LEVEL = 0;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "pin_name1";
+	CHANNEL = "ei";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
