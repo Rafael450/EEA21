@@ -1,0 +1,375 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 100000.0;
+	SIMULATION_TIME = 0.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 2500.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("Ai")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Bi")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Ci")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Ci1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Fi")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("M")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("S0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("S1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+GROUP("Ops")
+{
+	MEMBERS = "S1", "S0", "M", "Ci1";
+}
+
+GROUP("Input")
+{
+	MEMBERS = "Ai", "Bi";
+}
+
+TRANSITION_LIST("Ai")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 30000.0;
+		LEVEL 0 FOR 30000.0;
+		LEVEL 1 FOR 30000.0;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("Bi")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30000.0;
+		LEVEL 1 FOR 60000.0;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("Ci")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
+	}
+}
+
+TRANSITION_LIST("Ci1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL X FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL X FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("Fi")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
+	}
+}
+
+TRANSITION_LIST("M")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 20000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 20000.0;
+		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 30000.0;
+	}
+}
+
+TRANSITION_LIST("S0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL 1 FOR 2500.0;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+TRANSITION_LIST("S1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 10000.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Input";
+	EXPAND_STATUS = EXPANDED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+	CHILDREN = 1, 2;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ai";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Bi";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ops";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+	CHILDREN = 4, 5, 6, 7;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "M";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ci1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Fi";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ci";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;
