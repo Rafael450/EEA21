@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab3/Problema5.4/Problema54.bdf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab3/Problema5.4/Waveform.vwf
+source_file = 1, C:/Users/moise/OneDrive/Documentos/Estudos/ITA/COMP-1-1/EEA21/EEA21/Lab3/Problema5.4/db/Problema54.cbx.xml
+design_name = Problema54
+instance = comp, \si~output , si~output, Problema54, 1
+instance = comp, \ci~output , ci~output, Problema54, 1
+instance = comp, \b~input , b~input, Problema54, 1
+instance = comp, \a~input , a~input, Problema54, 1
+instance = comp, \ci1~input , ci1~input, Problema54, 1
+instance = comp, \inst~0 , inst~0, Problema54, 1
+instance = comp, \inst24~0 , inst24~0, Problema54, 1
