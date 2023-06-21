@@ -18,14 +18,14 @@
 #
 # Quartus II 64-Bit
 # Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-# Date created = 22:36:29  June 16, 2023
+# Date created = 23:55:47  June 20, 2023
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Problema52_assignment_defaults.qdf
+#		mef_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -36,20 +36,18 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV GX"
-set_global_assignment -name DEVICE EP4CGX22BF14C8
-set_global_assignment -name TOP_LEVEL_ENTITY Problema52
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY mef
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:36:29  JUNE 16, 2023"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:55:47  JUNE 20, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name BDF_FILE Problema52.bdf
+set_global_assignment -name BDF_FILE mef.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
