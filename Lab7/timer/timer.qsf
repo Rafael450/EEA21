@@ -18,14 +18,14 @@
 #
 # Quartus II 64-Bit
 # Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-# Date created = 00:37:51  June 21, 2023
+# Date created = 17:43:08  July 02, 2023
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Final_assignment_defaults.qdf
+#		timer_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,41 +38,17 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6E22C8
-set_global_assignment -name TOP_LEVEL_ENTITY Final
+set_global_assignment -name TOP_LEVEL_ENTITY timer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:37:51  JUNE 21, 2023"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:43:08  JULY 02, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name BDF_FILE ../CC/CC.bdf
-set_global_assignment -name BDF_FILE ../Contador/Contador.bdf
-set_global_assignment -name VHDL_FILE ../Conversor/Conversor.vhd
-set_global_assignment -name BDF_FILE ../mef/mef.bdf
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name QIP_FILE lpm_counter0.qip
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_88 -to CHAVE_S1
-set_location_assignment PIN_89 -to CHAVE_S2
-set_location_assignment PIN_23 -to CLOCK_FPGA
-set_location_assignment PIN_133 -to DIG1
-set_location_assignment PIN_135 -to DIG2
-set_location_assignment PIN_136 -to DIG3
-set_location_assignment PIN_137 -to DIG4
-set_location_assignment PIN_128 -to SEG_A
-set_location_assignment PIN_121 -to SEG_B
-set_location_assignment PIN_125 -to SEG_C
-set_location_assignment PIN_129 -to SEG_D
-set_location_assignment PIN_127 -to SEG_DP
-set_location_assignment PIN_132 -to SEG_E
-set_location_assignment PIN_126 -to SEG_F
-set_location_assignment PIN_124 -to SEG_G
+set_global_assignment -name VHDL_FILE timer.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_87 -to LED1
-set_location_assignment PIN_86 -to LED2
-set_location_assignment PIN_85 -to LED3
-set_location_assignment PIN_84 -to LED4
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
